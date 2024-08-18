@@ -14,11 +14,11 @@ Open=st.number_input('Enter the Opening price of your Stock')
 Low=st.number_input('Enter the Lowest price of your Stock')
 High=st.number_input('Enter the Highest price of your Stock')
 Data={
-     ' Volume':[Volume],' Open':[Open],' Low':[Low],' High':[High]
+     ' Volume':[Volume],' Open':[Open],' High':[High],' Low':[Low]
 }
 input=pd.DataFrame(Data)
 result=rf.predict(input)
-if st.write('button'):
+if st.button('button'):
      st.write(f"Estimated Closing price of your stock is: {result[0]:.3f}")
 with open('metrice.json', 'r') as f:
      metrice = json.load(f)
